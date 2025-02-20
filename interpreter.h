@@ -3,5 +3,6 @@
 
 #include "memory/memory.h"
 #include "code/code.h"
+#include "utils/utils.h"
 
 #endif
