@@ -1,0 +1,14 @@
+0x000002b7          # lui t0, 0
+0x00c2d293          # srli t0, t0, 12
+0x00001337          # lui t1, 1
+0x00c35313          # srli t1, t1, 12
+0x000023b7          # lui t2, 2
+0x00c3d393          # srli t2, t2, 12
+0x00003e37          # lui t3, 3
+0x00ce5e13          # srli t3, t3, 12
+0x00004eb7          # lui t4, 4
+0x00cede93          # srli t4, t4, 12
+0x00005f37          # lui t5, 5
+0x00cf5f13          # srli t5, t5, 12
+0x00006fb7          # lui t6, 6
+0x00cfdf93          # srli t6, t6, 12
