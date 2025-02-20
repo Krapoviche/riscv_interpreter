@@ -13,4 +13,6 @@ int main(){
     DEBUG("Loading code to memory\n");
     load_code_to_memory(central_memory, code);
     DEBUG("Loaded code to memory\n");
+
+    memory_dump(central_memory);
 }

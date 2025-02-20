@@ -8,4 +8,9 @@
     #define DEBUG(fmt, args...)
 #endif
 
+#include <stdio.h>
+#include "../memory/memory.h"
+
+void memory_dump(memory mem);
+
 #endif
