@@ -2,7 +2,7 @@
 
 cpu initialize_cpu(){
     cpu riscv_cpu;
-    riscv_cpu.registers = malloc(sizeof(int) * 32);
+    riscv_cpu.registers = malloc(sizeof(uint32_t) * 32);
     riscv_cpu.sp = (uint32_t*)&riscv_cpu.registers[2];
     *riscv_cpu.sp = CODE_SEGMENT_ADDRESS;
     riscv_cpu.clock.freq = CPU_CLOCK_FREQ;

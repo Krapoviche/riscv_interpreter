@@ -8,7 +8,7 @@
 
 typedef struct cpu
 {
-    uint32_t** registers;
+    uint32_t* registers;
     uint32_t* sp;
     cpu_clock clock;
 } cpu;
