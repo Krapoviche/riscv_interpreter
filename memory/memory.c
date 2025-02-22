@@ -9,3 +9,7 @@ memory initialize_memory(){
     mem.size = MEMORY_SIZE;
     return mem;
 }
+
+void* translate_address(memory mem, void* address){
+    return &mem.base_addr[(long)address];
+}

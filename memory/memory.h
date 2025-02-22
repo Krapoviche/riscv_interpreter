@@ -23,6 +23,7 @@ typedef struct memory
     int size;
 } memory;
 
-
 memory initialize_memory();
+void* translate_address(memory mem, void * address);
+
 #endif

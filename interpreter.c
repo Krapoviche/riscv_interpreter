@@ -14,5 +14,9 @@ int main(){
     load_code_to_memory(central_memory, code);
     DEBUG("Loaded code to memory\n");
 
-    memory_dump(central_memory);
+    DEBUG("Initializing CPU\n");
+    cpu riscv_cpu = initialize_cpu();
+    DEBUG("Initialized CPU\n");
+
+    start_clock(central_memory, riscv_cpu);
 }
