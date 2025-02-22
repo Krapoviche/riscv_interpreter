@@ -18,7 +18,7 @@ void start_clock(memory mem, cpu riscvcpu){
 
     // Fetch / Decode / Execute loop
     while(instruction_cycle(mem, riscvcpu)){
-        nanosleep(&ts, &ts);
+        INTER_CYCLE_WAIT(&ts, &ts);
     }
 }
 

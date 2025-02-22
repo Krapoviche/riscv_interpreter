@@ -6,6 +6,12 @@
 
 #define CPU_CLOCK_FREQ 2 // Hz
 
+#if defined(STEP_BY_STEP)
+    #define INTER_CYCLE_WAIT(a, b) getchar()
+#else
+    #define INTER_CYCLE_WAIT(a, b) nanosleep(a, b);
+#endif
+
 typedef struct cpu_clock
 {
     float freq; // In Hz
