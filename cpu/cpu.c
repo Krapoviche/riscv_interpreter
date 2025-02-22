@@ -3,7 +3,7 @@
 cpu initialize_cpu(){
     cpu riscv_cpu;
     riscv_cpu.registers = malloc(sizeof(int) * 32);
-    riscv_cpu.sp = (void**)&riscv_cpu.registers[2];
+    riscv_cpu.sp = (uint32_t*)&riscv_cpu.registers[2];
     *riscv_cpu.sp = CODE_SEGMENT_ADDRESS;
     riscv_cpu.clock.freq = CPU_CLOCK_FREQ;
     return riscv_cpu;
@@ -29,13 +29,13 @@ int instruction_cycle(memory mem, cpu riscv_cpu){
         DEBUG("EXECUTE 0x%x\n", instruction);
         // decode(instruction);
         // execute(instruction);
-        (*riscv_cpu.sp) += 4;
+        (*riscv_cpu.sp)++;
 
         return 1;
     }
     return 0;
 }
 
-int fetch(int* sp){
+int fetch(uint32_t* sp){
     return *sp;
 }

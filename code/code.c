@@ -1,7 +1,7 @@
 #include "code.h"
 
 void load_code_to_memory(memory mem, FILE* code_file){
-    int* instruction_pointer = mem.code_segment;
+    uint32_t* instruction_pointer = mem.code_segment;
 
     // Read instructions
     DEBUG("Start reading instructions :\n");

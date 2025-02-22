@@ -10,6 +10,6 @@ memory initialize_memory(){
     return mem;
 }
 
-void* translate_address(memory mem, void* address){
-    return &mem.base_addr[(long)address];
+uint32_t* translate_address(memory mem, uint32_t address){
+    return &mem.base_addr[address];
 }

@@ -2,6 +2,7 @@
 #define MEMORY_H_
 
 #include <stdlib.h>
+#include <stdint.h>
 
 #define MEMORY_SIZE 1024 // 1Ko memory
 #define CODE_SEGMENT_ADDRESS 0x0 // Code starts at @0x0
@@ -16,14 +17,14 @@
 
 typedef struct memory
 {
-    void* base_addr;
-    void* code_segment;
-    void* data_segment;
-    void* last_address;
+    uint32_t* base_addr;
+    uint32_t* code_segment;
+    uint32_t* data_segment;
+    uint32_t* last_address;
     int size;
 } memory;
 
 memory initialize_memory();
-void* translate_address(memory mem, void * address);
+uint32_t* translate_address(memory mem, uint32_t address);
 
 #endif

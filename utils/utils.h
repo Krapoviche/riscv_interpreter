@@ -9,6 +9,7 @@
 #endif
 
 #include <stdio.h>
+#include <stdint.h>
 #include "../memory/memory.h"
 
 void memory_dump(memory mem);

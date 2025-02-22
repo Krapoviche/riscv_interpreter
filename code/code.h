@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 #include "../memory/memory.h"
 #include "../utils/utils.h"
 

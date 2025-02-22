@@ -14,7 +14,7 @@
 
 typedef struct cpu_clock
 {
-    float freq; // In Hz
+    int freq; // In Hz
 } cpu_clock;
 
 #endif
