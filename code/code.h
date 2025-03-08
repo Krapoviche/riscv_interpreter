@@ -7,6 +7,6 @@
 #include "../memory/memory.h"
 #include "../utils/utils.h"
 
-void load_code_to_memory(memory mem, FILE* code_file);
+void load_code_to_memory(FILE* code_file);
 
 #endif

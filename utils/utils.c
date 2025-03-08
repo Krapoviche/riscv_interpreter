@@ -23,3 +23,11 @@ void memory_dump(memory mem){
     }
     printf("#############################\n");
 }
+
+struct timespec sub_timespec(struct timespec* t1, struct timespec* t2){
+    long ts1 = t1->tv_sec * NS_PER_SECOND + t1->tv_nsec;
+    long ts2 = t2->tv_sec * NS_PER_SECOND + t2->tv_nsec;
+
+    struct timespec t0 = {.tv_sec = (ts1 - ts2) / NS_PER_SECOND, .tv_nsec = (ts1 - ts2) % NS_PER_SECOND};
+    return t0;
+}

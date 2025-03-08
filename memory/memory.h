@@ -24,7 +24,9 @@ typedef struct memory
     int size;
 } memory;
 
-memory initialize_memory();
-uint32_t* translate_address(memory mem, uint32_t address);
+void initialize_memory(void);
+uint32_t* translate_address(uint32_t address);
+
+memory mem;
 
 #endif

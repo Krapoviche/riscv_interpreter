@@ -11,7 +11,9 @@
 #include <stdio.h>
 #include <stdint.h>
 #include "../memory/memory.h"
+#include "../cpu/clock.h"
 
 void memory_dump(memory mem);
+struct timespec sub_timespec(struct timespec* t1, struct timespec* t2);
 
 #endif

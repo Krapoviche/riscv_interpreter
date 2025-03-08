@@ -4,7 +4,11 @@
 #include <time.h>
 #include "../memory/memory.h"
 
-#define CPU_CLOCK_FREQ 2 // Hz
+#ifndef CPU_CLOCK_FREQ
+#define CPU_CLOCK_FREQ 1 // Hz
+#endif
+
+#define NS_PER_SECOND 1000000000
 
 #if defined(STEP_BY_STEP)
     #define INTER_CYCLE_WAIT(a, b) getchar()

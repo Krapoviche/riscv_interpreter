@@ -1,6 +1,6 @@
 #include "code.h"
 
-void load_code_to_memory(memory mem, FILE* code_file){
+void load_code_to_memory(FILE* code_file){
     uint32_t* instruction_pointer = mem.code_segment;
 
     // Read instructions
